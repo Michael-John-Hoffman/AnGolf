@@ -1,0 +1,12 @@
+
+<div *ngFor="let user of users">
+    <div class='Container'>
+        <h4 class='name'>{{user.name}}</h4>
+        <div *ngFor="let hole of getHolesForUser(user)">
+            <div class='par'>{{hole.par}}</div>
+            <div class='hcp'>{{hole.hcp}}</div>
+            <div class='yards'>{{hole.yards}}</div>
+            <div class='score'><input type="number"/></div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+<ul>
+    <li *ngFor="let user of users">
+        <div>{{user.name}}</div>
+    </li>
+</ul>
+<mat-form-field>
+    <input matInput placeholder="Name" #userName (keyup.enter)="addUser(userName.value, teeType)" newUserName.value='Happy Gilmore'>
+</mat-form-field>
+
+<mat-form-field>
+  <mat-label>Pick a Tee Type</mat-label>
+  <mat-select>
+    <mat-option *ngFor="let tee of teeTypes" [(value)]="teeType">
+      {{tee.value}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
